@@ -44,6 +44,6 @@ Isso bloqueará os processos especificados por 2,5 horas.
    Mensagens de status são exibidas utilizando `rich` para garantir que você saiba exatamente o que está acontecendo.
 
 
-## inspired by: bashbunni's cli pomodoro.
+## Eu me inspirei nesse projeto bashbunni que é um pomodoro cli:
 https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106
 
