@@ -1,6 +1,6 @@
 # WorkMode - Bloqueador de Aplicações Durante o Trabalho
 
-![projeto funcionando](work-mode.gif)
+![projeto funcionando](work-mode.gif "workmode funcionando")
 
 ## Descrição
 WorkMode é um script robusto que termina processos indesejados (como Telegram e Discord) durante suas horas de trabalho.
