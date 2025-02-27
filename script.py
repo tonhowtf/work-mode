@@ -39,5 +39,3 @@ args = parser.parse_args()
 work_mode(args.hours)
 
 
-# for proc in psutil.process_iter(['pid', 'name']):
-#     print(proc.info)
