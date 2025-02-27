@@ -27,7 +27,10 @@ def work_mode(hours: float):
             time.sleep(1)
             kill_process()
 
-work_mode(1)
+parser = argparse.ArgumentParser(
+                    prog='workmode',
+                    description='block aplications during work',
+                    epilog='')
 
 
 
