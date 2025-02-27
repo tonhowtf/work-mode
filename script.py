@@ -22,7 +22,7 @@ def kill_process():
 
 def work_mode(hours: float):
         total_timer = int(hours * 3600)
-        print(f"Iniciando timer de [bold green]{time} hora(s)")
+        print(f"Iniciando timer de [bold green]{hours} hora(s)")
         for i in alive_it(range(1, total_timer+1)):
             time.sleep(1)
             kill_process()
