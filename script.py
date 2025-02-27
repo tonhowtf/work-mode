@@ -33,5 +33,7 @@ parser = argparse.ArgumentParser(
                     epilog='')
 
 
-
+parser.add_argument("hours", type=float, help="Digite o tempo em horas, considerando que pode usar números com virgula e números menores do que 1")
+args = parser.parse_args()
+work_mode(args.hours)
 
