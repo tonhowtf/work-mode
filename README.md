@@ -45,5 +45,5 @@ Isso bloqueará os processos especificados por 2,5 horas.
 
 
 ## inspired by: bashbunni's cli pomodoro.
-## https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106
+https://gist.github.com/bashbunni/f6b04fc4703903a71ce9f70c58345106
 
