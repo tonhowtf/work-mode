@@ -18,7 +18,7 @@ def kill_process():
             except psutil.NoSuchProcess:
                 continue
             except psutil.AccessDenied:
-                print(f"[bold red]Access Denied para {proc.info['name']} Run as sudo")
+                print(f"[bold red]Access Denied para {proc.info['name']} Run as sudo or adm in windows")
 
 
 def work_mode(hours: float):
