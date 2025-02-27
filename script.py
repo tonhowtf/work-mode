@@ -10,7 +10,8 @@ victimsexe = [victim + '.exe' for victim in victims]
 
 def kill_process():
     for proc in psutil.process_iter(['pid', 'name']):
-        if proc.info['name'] in victims or proc.info['name'] in victimsexe:
+        name = proc.info.get('name')
+        if any(name == victim or name == f"{victim}.exe" for victim in victims):
             try:
                 proc.terminate()
                 proc.wait()
