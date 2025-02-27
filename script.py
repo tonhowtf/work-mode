@@ -2,6 +2,7 @@ import psutil
 import time
 from rich import print
 from alive_progress import alive_bar
+from alive_progress import alive_it
 
 
 def kill_process():
@@ -15,13 +16,11 @@ def kill_process():
 def work_mode(hours: float):
         total_timer = int(hours * 3600)
         print(f"Iniciando timer de [bold green]{time} hora(s)")
-        with alive_bar(total_timer) as bar:
-            for i in range(total_timer):
-                time.sleep(1)
-                kill_process()
-                bar()
+        for i in alive_it(range(1, total_timer)):
+            time.sleep(1)
+            kill_process()
 
-work_mode(0.01)
+work_mode(8)
 
 
 
