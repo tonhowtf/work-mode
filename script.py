@@ -13,7 +13,7 @@ def kill_process():
             try:
                 proc.terminate()
                 proc.wait()
-                print(f"{proc.info['name']} terminated at PID: {proc.info['pid'] [bold magenta]}")
+                print(f"{proc.info['name']} terminated at PID: {proc.info['pid']} [bold magenta]")
             except psutil.NoSuchProcess:
                 continue
             except psutil.AcessDenied:
