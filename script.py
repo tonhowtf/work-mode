@@ -3,20 +3,21 @@ import psutil
 import time
 from rich import print
 from alive_progress import alive_it
+import platform
 
-victim = ['Telegram', 'Discord']
-
+victims = ['Telegram', 'Discord',]
+victimsexe = [victim + '.exe' for victim in victims]
 
 def kill_process():
     for proc in psutil.process_iter(['pid', 'name']):
-        if proc.info['name'] in victim:
+        if proc.info['name'] in victims or proc.info['name'] in victimsexe:
             try:
                 proc.terminate()
                 proc.wait()
                 print(f"{proc.info['name']} terminated at PID: {proc.info['pid']} [bold magenta]")
             except psutil.NoSuchProcess:
                 continue
-            except psutil.AcessDenied:
+            except psutil.AccessDenied:
                 print(f"[bold red]Access Denied para {proc.info['name']} Run as sudo")
 
 
@@ -37,3 +38,6 @@ parser.add_argument("hours", type=float, help="Digite o tempo em horas, consider
 args = parser.parse_args()
 work_mode(args.hours)
 
+
+# for proc in psutil.process_iter(['pid', 'name']):
+#     print(proc.info)
