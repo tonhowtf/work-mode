@@ -1,11 +1,8 @@
 import psutil
-import sys,time, os
-from rich import print
-from rich.console import Console
-from alive_progress import alive_bar
 import time
+from rich import print
+from alive_progress import alive_bar
 
-console = Console()
 
 def kill_process():
     for proc in psutil.process_iter(['pid', 'name']):
